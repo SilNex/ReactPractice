@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
-import MyName from './MyName';
-import Counter from './Counter';
+// import MyName from './MyName';
+// import Counter from './Counter';
+import PhoneForm from './components/PhoneForm'
 
 class App extends Component {
+    handleCreate = (data) => {
+        console.log(data)
+    }
     render() {
         return (
-            <Counter />
+            <div>
+                <PhoneForm 
+                    onCreate={this.handleCreate}
+                />
+            </div>
         )
     }
 }
