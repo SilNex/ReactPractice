@@ -40,11 +40,12 @@ class App extends Component {
         const { information } = this.state;
         this.setState({
             information: information.map(
-                info => id === info.id
-                ? { ...info, ...data }
-                : info
+                info => id === info.id ? { ...info, ...data } : info
             )
         })
+    }
+    Click = (e) => {
+        console.log('hello')
     }
     render() {
         const { information, keyword } = this.state;
@@ -68,6 +69,7 @@ class App extends Component {
                     data={filteredList}
                     onRemove={this.handleRemove}
                     onUpdate={this.handleUpdate}
+                    onClick={this.Click}
                 />
             </div>
         );

@@ -101,10 +101,10 @@ class PhoneInfo extends Component {
         const {
             name, phone
         } = this.props.info;
-
+        console.log(this.props)
         return (
             <div style={style}>
-                <div><b>{name}</b></div>
+                <div onClick={this.props.onClick}><b>{name}</b></div>
                 <div>{phone}</div>
                 <button onClick={this.handleToggleEdit}>수정</button>
                 <button onClick={this.handleRemove}>삭제</button>
